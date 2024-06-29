@@ -1,0 +1,322 @@
+/* IMPORTAMOS TIPOGRAFIA DISTINTA PARA NUESTRO PORTAFOLIO */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.wrapper {      /*Le damos dimensiones y color al fondo y las letras*/
+  width: 100vw;        
+  height: 100vh;
+  background-color: #191c32;
+  color: #fff;
+}
+
+.navbar {    /*Damos las dimensiones de nuestro navegador */
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.brand {    /*Separacion lateral izquierda del menu*/
+  margin-top: -7px;
+}
+
+.brand span{     /*Le ponemos color distintivo a la C de "LC" */
+  color: aquamarine;
+}
+
+.menu {    /* Nuevas dimensiones de nuestro MENU */
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.menu li{     /* Le quitamos los puntitos al principio de cada menu */
+  list-style: none;
+}
+
+.menu a {    /*Le damos un color a las etiquetas de nuestro MENU*/
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.menu .active{   /*Nuevo color a el menu "HOME" */
+  color: aquamarine;
+}
+ 
+.menu a:hover {  /*Con el HOVER distinguimos cuando pasamos con el mouse por encima de los menus */
+  background-color: aquamarine;
+  color: #191c32;
+  transition: ease-in .4s;
+  border-radius: 10px;
+}
+
+.main {   /*definimos dimensiones de nombre y texto con la imagen de perfil*/
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 153px;
+}
+
+.main h1 {    
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+span {    /* Definimos color de "LEANDRO" en la parte del nombre*/
+  color: aquamarine;
+}
+
+.download-cv {    /*Definimos tamaño colores y estado de el bottom para descargar CV*/
+  padding: 10px 20px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 201, 0.596);
+  transition: ease-in .4s;
+}
+
+.download-cv:hover {  /*Le cambiamos que cuando pase el cursor por "Descargar CV" se cambie el color y se anule el RGBA que generamos con BOX SHADOW*/
+  background-color: #fff;
+  box-shadow: none;
+  transition: ease-in .4s;
+}
+
+.read-more:hover {
+  background-color: #191c32;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+
+.main img {   /*definimos tamaño y parametros de detalle como recuadro, border de nuestra IMAGEN*/
+  width: 380px;
+  border: 7px solid aquamarine;
+  height: 490px;
+}
+
+.info-content p {    /*Definimos tamaño del texto y lo alineamos con el titulo y la imagen*/
+  width: 41vw;
+  inline-size: 125%;
+}
+
+.about {            /*Definimos parametros y tamaño de nuestra nueva seccion "ABOUT" o SOBRE MI*/
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.about img {   /*Definimos parametros y tamaño de nuestra imagen*/
+  width: 100%;
+  grid-column: 1/5;
+
+}
+
+.about-info {   /*Modificamos tamaño y parametros del texto con la imagen*/
+  grid-column: 5/10;
+  padding: 3em;
+}
+
+.about-info h2 {     /*Editamos nuestro titulo*/
+  font-size: 2em;
+  color: #191c32;
+}
+
+.divider {     /*Definimos tamaño color de subrayado de nuestro titulo*/
+  height: 4px;
+  width: 60px;
+  background-color: aquamarine;
+  margin-top: 5px;
+  margin-bottom: 2.5em;
+}
+ 
+.about p {    /*Modificamos nuestro PARRAFO*/
+  margin-bottom: 3em;
+  color: #000000;
+}
+
+.portafolio {
+  width: 100vw;
+  background-color: #191c32;
+  color: #fff;
+}
+
+.portafolio-headings {       /* Encabezados de la sección portafolio */
+  width: 100vw;
+  padding: 5em;
+}
+
+.portafolio-headings h2 {    /* Estilo de los encabezados en la sección de portafolio */
+  font-size: 2.5em;
+}
+
+.portafolio .container{      /* Contenedor principal de las tarjetas del portafolio */
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card {                      /* Estilos para las tarjetas del portafolio */
+  width: 300px;
+  height: 420px;
+  color: #fff;
+  background-color: #28343b;
+  margin: 1.5em;
+}
+
+.card__img {                 /* Estilos para las imágenes de las tarjetas del portafolio */
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/2-original.png);
+  background-size: cover;
+}
+
+.card__title {               /*Estilo para los títulos de las tarjetas del portafolio*/
+  padding: 20px;
+}
+
+.card__proyect-links {       /*Estilo para los enlaces de los proyectos en las tarjetas del portafolio*/
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card__proyect-links a {     /*Estilo para los enlaces dentro de las tarjetas del portafolio*/
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__proyect-links i {      /*Estilo para los íconos de los enlaces en las tarjetas del portafolio*/
+  font-size: 1.5em;
+}
+
+.card .proyect-details {       /*Estilo para los detalles de los proyectos en las tarjetas del portafolio*/
+  margin: 0 auto;
+  margin: 1em;
+  width: 70%;
+  
+}
+
+.card .proyect-details a {      /*Estilo para los enlaces de los detalles de los proyectos en las tarjetas del portafolio*/
+  text-decoration: none;
+  color: #191c32;
+  text-transform: uppercase;
+}
+
+.proyect-details-content {       /*Estilo para el contenido de los detalles del proyecto*/
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+
+.contact-headings h2 {            /*Estilo para los encabezados de la sección de contacto*/
+  font-size: 2.5em;
+}
+
+  
+.container-contact {              /*Estilo para el contenedor de la sección de contacto*/
+  padding: 3em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.container-contact img {          /*Estilo para las imágenes en la sección de contacto*/
+  width: 650px;
+  height: 790px;
+  bottom: 0px;
+  margin-top: -70px;
+}
+
+.form {                          /*Estilo para el formulario de contacto*/
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+}
+
+.form input {                    /*Estilo para los campos de entrada del formulario de contacto*/
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.form textarea {                 /*Estilo para el área de texto del formulario de contacto*/
+  height: 150px;
+  background: none;
+  color: #fff;
+  padding: 1.5em;
+  border: 1px solid #fff;
+}
+
+.btn-submit {                    /*Estilo para el botón de enviar del formulario de contacto*/
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: aquamarine;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 201, 0.596);
+}
+
+
+.btn-submit:hover {             /*Le cambiamos que cuando pase el cursor por "Descargar CV" se cambie el color y se anule el RGBA que generamos con BOX SHADOW*/
+  background-color: #fff;
+  box-shadow: none;
+  transition: ease-in .4s;
+}
+
+
+.footer {                        /*Estilo para el pie de página*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  background-color: aquamarine;
+  color: #191c32;
+}
+
+.footer-content h2,               /*Estilo para los encabezados del contenido del pie de página*/
+.social-network i {               /*Estilo para los íconos de la red social en el pie de página*/
+  font-size: 3em;
+}
+
+.footer-content h5 {              /*Estilo para los subtítulos del contenido del pie de página*/
+  font-size: 1.5em;
+}
+
+.social-network {                 /*Estilo para la sección de redes sociales en el pie de página*/
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+}
+
+
+
+
